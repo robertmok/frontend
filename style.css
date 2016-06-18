@@ -371,6 +371,10 @@
     #main.container-fluid {
         padding: 0px;
     }
+    #address {
+        color: red;
+        padding-left: 50px;
+    }
     
     .slideanim {
         visibility:hidden;
