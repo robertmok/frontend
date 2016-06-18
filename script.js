@@ -1,4 +1,6 @@
-    $(document).ready(function(){
+var app = angular.module('myApp', []);   
+
+$(document).ready(function(){
         $("#circle").click(function(){
             $("#quote").slideToggle("slow");
             if ($("#circle").html() == '<span class="glyphicon glyphicon-chevron-down"></span>') 
