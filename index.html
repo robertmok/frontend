@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
 <link href='https://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="script.js"> </script>
@@ -144,15 +147,18 @@ Home
     <p id="subtitle"> Become One of Us </p>
     <p id="subinfo"> Module 01 is big, stylish and handy UI Kit, full of many useful elements </p>
     <div class="container" id="subbar">
+        <form ng-app="myApp" name="myForm">
         <div class = "input-group">
             <span class = "input-group-addon" id="part1">
                 <span id="send" class="glyphicon glyphicon-send"></span>
             </span>
-            <input type="text" class="form-control input-lg" placeholder="E-mail Address" id="part2"/>
+            <input type="email" class="form-control input-lg" placeholder="E-mail Address" id="part2" name="email" ng-model="email"/>
             <span class="input-group-btn">
                 <button class="btn btn-success btn-lg" type="button" id="part3"> Let's chat </button>
             </span>
         </div>
+        <div ng-show="myForm.email.$error.email" id="address">Invalid email address.</div>
+        </form>
     </div>
 </section>
 
